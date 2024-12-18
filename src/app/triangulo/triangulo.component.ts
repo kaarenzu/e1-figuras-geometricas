@@ -33,8 +33,6 @@ export class TrianguloComponent implements OnInit {
     const triangulo = new TrianguloEscaleno(ladoA, ladoB, ladoC)
     const perimetro = triangulo.calcularPerimetro()
     this.resultado = `El perimetro es ${perimetro}`
-
-
   }
 
   ngOnInit() { }
