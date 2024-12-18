@@ -1,7 +1,7 @@
 <ion-list>
 
 
-  <ion-card color="light">
+  <ion-card>
 
     <ion-card-header>
       <ion-card-subtitle>Perímetro</ion-card-subtitle>
@@ -10,18 +10,30 @@
 
     </ion-card-header>
     <ion-card-content>
-      El perímetro de un triangulo es la suma de las logitufes de sus tres lados.En otra palabras, es la medida
-      total del contorno o borde del triángulo
+      El perímetro de un triángulo es la suma de las
+      logitudes de sus tres lados.En otra palabras,
+      es la medida total del contorno o borde del triángulo
     </ion-card-content>
     <img alt="triangulo"
       src="https://github.com/kaarenzu/e1-figuras-geometricas/blob/main/src/app/triangulo/img-triangulo.png?raw=true" />
   </ion-card>
   <ion-item>
-    <ion-input label="Lado A (cm)" labelPlacement="stacked" placeholder="Ingrese el radio">
+    <ion-input [(ngModel)]="ladoA" label="Lado A (cm)" labelPlacement="stacked" placeholder="Ingrese lado A">
     </ion-input>
   </ion-item>
   <ion-item>
-    <ion-button>CALCULAR EL PÉRIMETRO</ion-button>
+    <ion-input [(ngModel)]="ladoB" label="Lado B (cm)" labelPlacement="stacked" placeholder="Ingrese lado B">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="ladoC" label="Lado C (cm)" labelPlacement="stacked" placeholder="Ingrese lado C">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-button (click)="calcularPerimetroTriangulo()">CALCULAR EL PÉRIMETRO</ion-button>
+  </ion-item>
+  <ion-item>
+    {{resultado}}
   </ion-item>
 
 </ion-list>

@@ -1,26 +1,26 @@
 <ion-list>
-
-
-  <ion-card color="light">
-
-    <ion-card-header>
-      <ion-card-subtitle>Perímetro</ion-card-subtitle>
-      <br>
-      <ion-card-title>Círculo</ion-card-title>
-
-    </ion-card-header>
-    <ion-card-content>
-      El perímetro de un circulo es la longitud de la línea que forma su borde
-    </ion-card-content>
-    <img alt="circulo"
-      src="https://i0.wp.com/nte.mx/wp-content/uploads/2020/11/se-sabe-que-el-radio.png?resize=780%2C518&is-pending-load=1#038;ssl=1" />
-  </ion-card>
   <ion-item>
-    <ion-input label="Radio (cm)" labelPlacement="stacked" placeholder="Ingrese el radio">
-    </ion-input>
+    <ion-card color="light">
+      <ion-card-header>
+        <ion-card-subtitle>Perímetro</ion-card-subtitle>
+        <br>
+        <ion-card-title>Círculo</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        El perímetro de un circulo es la longitud de la línea que forma su borde
+      </ion-card-content>
+      <img alt="circulo"
+        src="https://github.com/kaarenzu/e1-figuras-geometricas/blob/main/src/app/circulo/img-circulo.png?raw=true" />
+    </ion-card>
   </ion-item>
   <ion-item>
-    <ion-button>CALCULAR EL PÉRIMETRO</ion-button>
+    <ion-input [(ngModel)]="radio" label="Radio (cm)" labelPlacement="stacked"
+      placeholder="Ingrese el radio"></ion-input>
   </ion-item>
-
+  <ion-item>
+    <ion-button (click)="calcularPerimetro()">CALCULAR EL PÉRIMETRO</ion-button>
+  </ion-item>
+  <ion-item>
+    {{resultado}}
+  </ion-item>
 </ion-list>
